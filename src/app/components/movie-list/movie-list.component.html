@@ -1,0 +1,39 @@
+<div class="movie-container">
+        <h1 class="title">Movie App</h1>
+        
+        <input 
+          type="text" 
+          (input)="searchMovies($event)" 
+          placeholder="Search for a movie..." 
+          class="search-box"
+        />
+      
+        <div class="movie-grid">
+          <div class="movie-card" *ngFor="let movie of movies()">
+            <img [src]="movie.Poster" [alt]="movie.Title" class="movie-poster"/>
+            <div class="movie-info">
+              <h3 class="movie-title">{{ movie.Title }}</h3>
+              <p class="movie-year">{{ movie.Year }}</p>
+              <button [routerLink]="['/movie', movie.imdbID]" class="details-btn">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+<!--
+<div class="search-bar">
+        <input type="text" [value]="searchQuery()" placeholder="Search..." (input)="searchMovies($event)">
+        <button (click)="searchMovies($event)">Search</button>
+      </div>
+      
+      <div class="movies">
+        <div class="movie-card" *ngFor="let movie of movies()">
+          <img [src]="movie.Poster" alt="{{ movie.Title }}">
+          <h3>{{ movie.Title }}</h3>
+          <p>{{ movie.Year }}</p>
+          <a [routerLink]="['/movie', movie.imdbID]">View Details</a> 
+        </div>
+      </div>
+-->      

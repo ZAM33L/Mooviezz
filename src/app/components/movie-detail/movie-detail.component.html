@@ -1,0 +1,44 @@
+<div *ngIf="movie()" class="movie-detail-container">
+        <div class="movie-header">
+          <img [src]="movie().Poster" alt="{{ movie().Title }}">
+          <div class="movie-info">
+            <h2>{{ movie().Title }}</h2>
+            <p><strong>Released:</strong> {{ movie().Released }}</p>
+            <p><strong>Genre:</strong> {{ movie().Genre }}</p>
+            <p><strong>Director:</strong> {{ movie().Director }}</p>
+            <p><strong>IMDB Rating:</strong> ⭐ {{ movie().imdbRating }}</p>
+          </div>
+        </div>
+      
+        <p><strong>Plot:</strong> {{ movie().Plot }}</p>
+      
+        <div class="movie-meta">
+          <span class="meta-item"><strong>Actors:</strong> {{ movie().Actors }}</span>
+          <span class="meta-item"><strong>Awards:</strong> 🏆 {{ movie().Awards }}</span>
+          <span class="meta-item"><strong>Country:</strong> {{ movie().Country }}</span>
+          <span class="meta-item"><strong>Language:</strong> {{ movie().Language }}</span>
+          <span class="meta-item"><strong>Runtime:</strong> ⏳ {{ movie().Runtime }}</span>
+          <span class="meta-item"><strong>Writer:</strong> ✍️ {{ movie().Writer }}</span>
+        </div>
+      
+        <a routerLink="/" class="back-button">← Back to List</a>
+      </div>
+      
+<!--
+<div *ngIf="movie()" class="movie-details">
+        <h2>{{ movie().Title }}</h2>
+        <img [src]="movie().Poster" alt="{{ movie().Title }}">
+        
+        <p><strong>Year:</strong> {{ movie().Year }}</p>
+        <p><strong>Plot:</strong> {{ movie().Plot }}</p>
+        <p><strong>Country:</strong> {{ movie().Country }}</p>
+        <p><strong>Director:</strong> {{ movie().Director }}</p>
+        <p><strong>Genre:</strong> {{ movie().Genre }}</p>
+        <p><strong>Language:</strong> {{ movie().Language }}</p>
+        <p><strong>Released:</strong> {{ movie().Released }}</p>
+        <p><strong>Runtime:</strong> {{ movie().Runtime }}</p>
+        <p><strong>IMDb Rating:</strong> {{ movie().imdbRating }}</p>
+      
+        <button [routerLink]="['/']">Back to List</button>
+      </div>
+   -->   
