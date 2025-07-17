@@ -2,6 +2,10 @@
 
 Mooviezz is a sleek, modern movie discovery web app built using Angular. It allows users to browse trending movies, view detailed movie information, and explore by genres — all through a clean, responsive interface.
 
+
+https://github.com/user-attachments/assets/52502e60-58e7-43f9-8732-fd9ef2b90337
+
+
 ---
 
 ## 🌟 Features
